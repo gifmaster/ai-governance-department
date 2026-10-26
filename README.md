@@ -26,6 +26,8 @@ The five public agents were run on the fictional [Havbris Energi](examples/havbr
 - **One run.** `claude-opus-5-5` through the Claude Code CLI, with no tools.
 - **Scored by hand** by the author of the test.
 
+**Watch it:** [76-second clip of the prompt-injection trap being caught](examples/havbris-energi/results/2026-10-26-claude-opus-5-5/t1-recording/t1-prompt-injection.mp4). It replays a separate live run from its recorded stream; [how it was made](examples/havbris-energi/results/2026-10-26-claude-opus-5-5/t1-recording/).
+
 Every line of the [full scorecard](examples/havbris-energi/results/2026-10-26-claude-opus-5-5/SCORECARD.md) links to the evidence in the [raw outputs](examples/havbris-energi/results/2026-10-26-claude-opus-5-5/), so you can check each verdict yourself.
 
 Built on the [Hourglass Model of Organizational AI Governance](https://ai-governance.eu/ai-governance-framework/the-hourglass-model-2026/) (2026 edition) and aimed at the EU AI Act, GDPR and ISO/IEC 42001. Written for organisations that mostly *use* AI rather than build it.
