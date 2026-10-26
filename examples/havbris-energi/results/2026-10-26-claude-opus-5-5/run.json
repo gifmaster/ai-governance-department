@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "model_requested": "claude-opus-5-5",
+  "cli_version": "2.1.310 (Claude Code)",
+  "setup": "One fresh print-mode session per step, no tools, no MCP servers, no settings, empty working directory. Project Instructions as custom instructions; project knowledge = the files below. Answer key and READMEs never included.",
+  "project_knowledge": {
+    "department/00 README - START HERE.md": "f6e4e1237f0d6f25",
+    "department/01 PROJECT INSTRUCTIONS.md": "01bd388cf800f183",
+    "department/02 GENERIC AGENT TEMPLATE.md": "6e15f11b26c9c606",
+    "department/AGENT AIG 01 - REGULATORY RADAR.md": "ba790bdcfb983d7d",
+    "department/AGENT AIG 03 - AI STRATEGY ALIGNER.md": "f28b32ed95201576",
+    "department/AGENT AIG 07 - AI SYSTEM INVENTORY AND CLASSIFIER.md": "f7865356e5e4b587",
+    "department/AGENT AIG 11 - LIFECYCLE GATEKEEPER.md": "a779d3ebc977477e",
+    "department/AGENT AIG 15 - MONITORING AND INCIDENT DESK.md": "09ab3a1d1bbacb1a",
+    "department/TEMPLATE - AI INCIDENT REPORT.md": "98f69eaec634e1c6",
+    "department/TEMPLATE - AI SYSTEM REGISTER ENTRY.md": "d23465adef60855e",
+    "department/TEMPLATE - LIFECYCLE GATE CHECKLIST.md": "e1638eb15cb9db39",
+    "department/TEMPLATE - MONITORING PLAN.md": "adea46f6c2530c07",
+    "department/TEMPLATE - REGULATORY WATCH LOG.md": "de2cfe8b5fb46b68",
+    "department/TEMPLATE - USE CASE CARD.md": "5e241a89851d315a",
+    "department/TEMPLATE - VENDOR REVIEW.md": "b69608f921070681",
+    "examples/havbris-energi/context-file-havbris.md": "958a89f3d819ff7f",
+    "examples/havbris-energi/01-use-case-idea.md": "f4211e99e7970598",
+    "examples/havbris-energi/02-vendor-fact-sheet.md": "b5457c87c9f3cd13",
+    "examples/havbris-energi/03-system-notes.md": "7889986b983773ce",
+    "examples/havbris-energi/04-committee-minutes.md": "16dcb394c9654e91",
+    "examples/havbris-energi/05-monitoring-log.csv": "82fee3e33a890123",
+    "examples/havbris-energi/06-incident-raw.md": "f81c56821f1a33a2"
+  },
+  "system_prompt_sha256": "e0f7020ff459b85e",
+  "steps": {
+    "1": {
+      "prompt": "Run AIG 03 Mode A on the idea in file 01.",
+      "output_file": "step-1-aig03-mode-a.md",
+      "is_error": false,
+      "models_used": [
+        "claude-haiku-5-5",
+        "claude-opus-5-5"
+      ],
+      "duration_s": 55.7,
+      "cost_usd": 0.2273,
+      "num_turns": 1
+    }
+  }
+}
