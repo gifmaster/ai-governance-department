@@ -32,38 +32,107 @@
     "1": {
       "prompt": "Run AIG 03 Mode A on the idea in file 01.",
       "output_file": "step-1-aig03-mode-a.md",
-      "is_error": false,
-      "models_used": [
-        "claude-haiku-5-5",
-        "claude-opus-5-5"
-      ],
-      "duration_s": 55.7,
-      "cost_usd": 0.2273,
-      "num_turns": 1
+      "attempts": [
+        {
+          "is_error": false,
+          "models_used": [
+            "claude-haiku-5-5",
+            "claude-opus-5-5"
+          ],
+          "duration_s": 55.7,
+          "cost_usd": 0.2273,
+          "num_turns": 1,
+          "at": "2026-10-26 (first run, time not recorded)"
+        }
+      ]
     },
     "2": {
       "prompt": "Run AIG 07 Mode D for ChatNordic using files 02 and 03.",
       "output_file": "step-2-aig07-mode-d.md",
-      "is_error": false,
-      "models_used": [
-        "claude-haiku-5-5",
-        "claude-opus-5-5"
-      ],
-      "duration_s": 44.7,
-      "cost_usd": 0.1082,
-      "num_turns": 1
+      "attempts": [
+        {
+          "is_error": false,
+          "models_used": [
+            "claude-haiku-5-5",
+            "claude-opus-5-5"
+          ],
+          "duration_s": 44.7,
+          "cost_usd": 0.1082,
+          "num_turns": 1,
+          "at": "2026-10-26 (first run, time not recorded)"
+        }
+      ]
     },
     "3": {
       "prompt": "Run AIG 07 Mode A and then Mode B for KundeAssist.",
       "output_file": "step-3-aig07-mode-a-b.md",
-      "is_error": false,
-      "models_used": [
-        "claude-haiku-5-5",
-        "claude-opus-5-5"
+      "attempts": [
+        {
+          "is_error": false,
+          "models_used": [
+            "claude-haiku-5-5",
+            "claude-opus-5-5"
+          ],
+          "duration_s": 65.6,
+          "cost_usd": 0.1478,
+          "num_turns": 1,
+          "at": "2026-10-26 (first run, time not recorded)"
+        }
+      ]
+    },
+    "4": {
+      "prompt": "Run AIG 11 Mode A, pre-deployment gate, for KundeAssist.",
+      "attempts": [
+        {
+          "is_error": true,
+          "models_used": [
+            "claude-haiku-5-5"
+          ],
+          "duration_s": 25.9,
+          "cost_usd": 0.0005,
+          "num_turns": 1,
+          "at": "2026-10-26 (first run, time not recorded)",
+          "error": "API Error: This request would exceed your account's rate limit. Please try again later."
+        },
+        {
+          "at": "2026-10-26T16:43:12+00:00",
+          "is_error": false,
+          "models_used": [
+            "claude-haiku-5-5",
+            "claude-opus-5-5"
+          ],
+          "duration_s": 42.2,
+          "cost_usd": 0.201,
+          "num_turns": 1
+        }
       ],
-      "duration_s": 65.6,
-      "cost_usd": 0.1478,
-      "num_turns": 1
+      "output_file": "step-4-aig11-mode-a.md"
+    },
+    "5": {
+      "prompt": "Run AIG 15 Mode A for KundeAssist using file 05, then Mode B for file 06.",
+      "attempts": [
+        {
+          "is_error": true,
+          "models_used": [],
+          "duration_s": 0.5,
+          "cost_usd": 0,
+          "num_turns": 1,
+          "at": "2026-10-26 (first run, time not recorded)",
+          "error": "You've hit your session limit \u00b7 resets 4:40pm (UTC)"
+        },
+        {
+          "at": "2026-10-26T16:44:16+00:00",
+          "is_error": false,
+          "models_used": [
+            "claude-haiku-5-5",
+            "claude-opus-5-5"
+          ],
+          "duration_s": 63.7,
+          "cost_usd": 0.1452,
+          "num_turns": 1
+        }
+      ],
+      "output_file": "step-5-aig15-mode-a-b.md"
     }
   }
 }

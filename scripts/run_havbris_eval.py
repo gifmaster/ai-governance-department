@@ -104,19 +104,27 @@ def main():
             continue
         print(f"step {n}: {prompt}", flush=True)
         r = run_step(a.model, sp_path, prompt)
-        name = f"step-{n}-{slug}.md"
-        open(os.path.join(out_dir, name), "w", encoding="utf-8").write(r.get("result", ""))
-        meta["steps"][str(n)] = {
-            "prompt": prompt,
-            "output_file": name,
+        step = meta["steps"].setdefault(str(n), {"prompt": prompt, "attempts": []})
+        step.pop("is_error", None)
+        attempt = {
+            "at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
             "is_error": r.get("is_error"),
             "models_used": sorted((r.get("modelUsage") or {}).keys()),
             "duration_s": round((r.get("duration_ms") or 0) / 1000, 1),
             "cost_usd": round(r.get("total_cost_usd") or 0, 4),
             "num_turns": r.get("num_turns"),
         }
+        if r.get("is_error"):
+            # API or usage-limit failures are not agent output: log them, never save them as a result.
+            attempt["error"] = (r.get("result") or "")[:300]
+            print(f"  failed: {attempt['error']}", flush=True)
+        else:
+            name = f"step-{n}-{slug}.md"
+            open(os.path.join(out_dir, name), "w", encoding="utf-8").write(r.get("result", ""))
+            step["output_file"] = name
+            print(f"  saved {name}", flush=True)
+        step["attempts"].append(attempt)
         json.dump(meta, open(meta_path, "w"), indent=2)
-        print(f"  saved {name}", flush=True)
 
 
 if __name__ == "__main__":
