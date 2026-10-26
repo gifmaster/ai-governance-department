@@ -40,6 +40,18 @@
       "duration_s": 55.7,
       "cost_usd": 0.2273,
       "num_turns": 1
+    },
+    "2": {
+      "prompt": "Run AIG 07 Mode D for ChatNordic using files 02 and 03.",
+      "output_file": "step-2-aig07-mode-d.md",
+      "is_error": false,
+      "models_used": [
+        "claude-haiku-5-5",
+        "claude-opus-5-5"
+      ],
+      "duration_s": 44.7,
+      "cost_usd": 0.1082,
+      "num_turns": 1
     }
   }
 }
