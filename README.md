@@ -73,7 +73,7 @@ The full department was tested the same way against a larger fictional insurer w
 ## Credits and licence
 
 - The Hourglass Model and the AI Governance Framework: Mäntymäki, M., Minkkinen, M., Birkstedt, T. and Viljanen, M. (2022). *Putting AI Ethics into Practice: The Hourglass Model of Organizational AI Governance*. arXiv:2206.00335. 2026 edition at [ai-governance.eu](https://ai-governance.eu/ai-governance-framework/the-hourglass-model-2026/). This project references the model's structure and task IDs; it does not reproduce the task list.
-- This repository: [CC BY 4.0](LICENSE). Use it, adapt it, credit it.
+- This repository: [CC BY-NC-SA 4.0](LICENSE). Free to use and adapt inside your own organisation, with credit. Using it in paid services or products needs permission: [alexander@senderovitz.eu](mailto:alexander@senderovitz.eu).
 - Not legal advice. Every legal point needs a qualified adviser.
 
 Made by [Alexander Senderovitz](https://senderovitz.eu), Copenhagen. AI governance, digital transformation and change. [LinkedIn](https://www.linkedin.com/in/asenderovitz/)
