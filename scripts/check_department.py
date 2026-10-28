@@ -3,7 +3,8 @@
 
 Checks that every agent file is complete and consistent, that the shared rules
 match the project instructions word for word, that every template an agent
-names actually exists, that no em dashes slipped in, and (with --full) that the
+names actually exists, that no em dashes slipped in (raw evaluation outputs in
+results/ are skipped, since they must stay unedited), and (with --full) that the
 agents together cover every task in the Hourglass Model 2026 edition.
 
 Usage: python scripts/check_department.py [--full]
@@ -22,7 +23,8 @@ instructions = open(os.path.join(ROOT, "01 PROJECT INSTRUCTIONS.md"), encoding="
 shared = instructions[instructions.index("Shared rules for every AIG agent:"):].strip()
 
 for root, _, names in os.walk(os.path.join(ROOT, "..")):
-    if ".git" in root:
+    # Raw model outputs in results/ are saved unedited on purpose; em dashes there are scored, not fixed.
+    if ".git" in root or os.sep + "results" in root:
         continue
     for n in names:
         if n.endswith((".md", ".csv", ".txt", ".py", ".yml")):

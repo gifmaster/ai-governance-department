@@ -11,6 +11,12 @@ Use it to see how the five public agents behave on messy, realistic input.
 3. Do **not** upload `TEST-SCRIPT.md`. It is the answer key.
 4. Run the steps in `TEST-SCRIPT.md` one by one and compare the output with the "Pass if" criteria.
 
+## Recorded results
+
+[`results/`](results/) holds recorded runs, one folder per date and model, with the raw outputs unedited and a scorecard. Latest: [26 October 2026, claude-opus-5-5, 22 of 22](results/2026-10-26-claude-opus-5-5/SCORECARD.md).
+
+To make a new run: `python scripts/run_havbris_eval.py --model <model>`.
+
 ## Files
 
 | File | What it is |
